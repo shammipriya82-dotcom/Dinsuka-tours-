@@ -1,0 +1,699 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dinsuka Tours | Guided by Shammi - Explore Sri Lanka</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts: Plus Jakarta Sans & Playfair Display -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;1,600&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+                        serif: ['"Playfair Display"', 'serif'],
+                    },
+                    colors: {
+                        forest: {
+                            50: '#f0fdf4',
+                            100: '#dcfce7',
+                            200: '#bbf7d0',
+                            600: '#16a34a',
+                            700: '#15803d',
+                            800: '#166534',
+                            900: '#0f3d24',
+                            950: '#072414',
+                        },
+                        amber: {
+                            400: '#fbbf24',
+                            500: '#f59e0b',
+                            600: '#d97706',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-stone-50 text-slate-800 font-sans antialiased selection:bg-forest-700 selection:text-white">
+
+    <!-- ==================== NAVIGATION BAR ==================== -->
+    <nav id="navbar" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-forest-950/80 backdrop-blur-md border-b border-white/10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                <!-- Brand Logo -->
+                <a href="#home" class="flex items-center gap-3 group">
+                    <div class="w-11 h-11 rounded-xl bg-gradient-to-br from-emerald-500 to-forest-800 flex items-center justify-center text-white shadow-lg shadow-emerald-950/50 group-hover:scale-105 transition-transform">
+                        <i class="fa-solid fa-leaf text-xl text-amber-300"></i>
+                    </div>
+                    <div>
+                        <span class="font-serif text-xl sm:text-2xl font-bold text-white tracking-wide block leading-none">Dinsuka Tours</span>
+                        <span class="text-xs text-emerald-300 font-medium tracking-widest uppercase">Sri Lanka • Guide Shammi</span>
+                    </div>
+                </a>
+
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="#home" class="text-sm font-medium text-stone-200 hover:text-amber-400 transition-colors">Home</a>
+                    <a href="#destinations" class="text-sm font-medium text-stone-200 hover:text-amber-400 transition-colors">Top Destinations</a>
+                    <a href="#about" class="text-sm font-medium text-stone-200 hover:text-amber-400 transition-colors">About Shammi</a>
+                    <a href="#booking" class="px-5 py-2.5 rounded-full bg-emerald-600 hover:bg-emerald-500 text-white text-sm font-semibold shadow-lg shadow-emerald-900/40 transition-all transform hover:-translate-y-0.5 flex items-center gap-2">
+                        <i class="fa-regular fa-calendar-check"></i> Book a Tour
+                    </a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <div class="md:hidden">
+                    <button id="mobile-menu-btn" type="button" class="p-2.5 rounded-xl text-stone-200 hover:text-white hover:bg-white/10 focus:outline-none" aria-label="Open menu">
+                        <i class="fa-solid fa-bars text-xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Dropdown Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-forest-950/95 backdrop-blur-lg border-b border-white/10 px-4 pt-2 pb-6 space-y-2">
+            <a href="#home" class="mobile-link block px-4 py-3 rounded-xl text-base font-medium text-white hover:bg-white/10">Home</a>
+            <a href="#destinations" class="mobile-link block px-4 py-3 rounded-xl text-base font-medium text-white hover:bg-white/10">Top Destinations</a>
+            <a href="#about" class="mobile-link block px-4 py-3 rounded-xl text-base font-medium text-white hover:bg-white/10">About Shammi</a>
+            <a href="#booking" class="mobile-link block px-4 py-3 rounded-xl text-base font-semibold bg-emerald-600 text-white text-center mt-3 shadow-md">
+                Book Your Tour Now
+            </a>
+        </div>
+    </nav>
+
+    <!-- ==================== HERO SECTION WITH LIVE/MOVING VIDEO ==================== -->
+    <section id="home" class="relative min-h-screen flex items-center justify-center overflow-hidden pt-20">
+        <!-- Live Background Video (Tropical Nature / Sri Lanka Lush Landscape) -->
+        <video 
+            autoplay 
+            loop 
+            muted 
+            playsinline 
+            poster="https://images.unsplash.com/photo-1586613835341-78c143aef52c?auto=format&fit=crop&w=1920&q=80"
+            class="absolute inset-0 w-full h-full object-cover scale-105"
+        >
+            <!-- High-definition lush tropical waterfall & green mountain nature loop -->
+            <source src="https://assets.mixkit.co/videos/preview/mixkit-waterfall-in-forest-2213-large.mp4" type="video/mp4">
+            <source src="https://assets.mixkit.co/videos/preview/mixkit-aerial-view-of-a-green-valley-with-a-river-42494-large.mp4" type="video/mp4">
+        </video>
+
+        <!-- Nature-inspired Dark Emerald Gradient Overlay for Crisp Readability -->
+        <div class="absolute inset-0 bg-gradient-to-b from-forest-950/75 via-forest-950/60 to-forest-950/90"></div>
+
+        <!-- Hero Content -->
+        <div class="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center py-16">
+            <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 backdrop-blur-md border border-emerald-400/30 text-emerald-200 text-xs sm:text-sm font-medium mb-6">
+                <span class="w-2 h-2 rounded-full bg-emerald-400 animate-ping"></span>
+                <span>Authentic Sri Lankan Hospitality & Private Tours</span>
+            </div>
+
+            <h1 class="font-serif text-4xl sm:text-6xl lg:text-7xl font-bold text-white leading-tight mb-6 drop-shadow-sm">
+                Discover the Untouched Beauty of <span class="text-transparent bg-clip-text bg-gradient-to-r from-emerald-300 via-teal-200 to-amber-300">Sri Lanka</span>
+            </h1>
+
+            <p class="text-base sm:text-xl text-stone-200 max-w-2xl mx-auto mb-10 leading-relaxed font-normal">
+                Welcome to <strong class="text-white font-semibold">Dinsuka Tours</strong>. Travel safely and comfortably across the island with your trusted local tour guide, <strong class="text-amber-300 font-semibold">Shammi</strong>.
+            </p>
+
+            <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+                <a href="#booking" class="w-full sm:w-auto px-8 py-4 rounded-2xl bg-gradient-to-r from-emerald-600 to-forest-700 hover:from-emerald-500 hover:to-forest-600 text-white font-bold text-base sm:text-lg shadow-xl shadow-emerald-950/60 border border-emerald-400/30 transition-all transform hover:-translate-y-1 flex items-center justify-center gap-3">
+                    <span>Plan & Book Your Tour</span>
+                    <i class="fa-solid fa-arrow-right"></i>
+                </a>
+                <a href="#destinations" class="w-full sm:w-auto px-8 py-4 rounded-2xl bg-white/10 hover:bg-white/20 backdrop-blur-md text-white font-semibold text-base sm:text-lg border border-white/25 transition-all flex items-center justify-center gap-2">
+                    <i class="fa-solid fa-compass text-amber-300"></i>
+                    <span>Explore Destinations</span>
+                </a>
+            </div>
+
+            <!-- Quick Highlights Strip -->
+            <div class="mt-16 grid grid-cols-3 gap-4 max-w-2xl mx-auto pt-8 border-t border-white/15 text-white">
+                <div>
+                    <p class="text-2xl sm:text-3xl font-serif font-bold text-amber-300">100%</p>
+                    <p class="text-xs sm:text-sm text-stone-300 mt-1">Safe & Private Travel</p>
+                </div>
+                <div>
+                    <p class="text-2xl sm:text-3xl font-serif font-bold text-emerald-300">Islandwide</p>
+                    <p class="text-xs sm:text-sm text-stone-300 mt-1">Custom Tour Routes</p>
+                </div>
+                <div>
+                    <p class="text-2xl sm:text-3xl font-serif font-bold text-amber-300">24/7</p>
+                    <p class="text-xs sm:text-sm text-stone-300 mt-1">Direct Guide Support</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Scroll Down Indicator -->
+        <a href="#destinations" aria-label="Scroll down" class="absolute bottom-6 left-1/2 -translate-x-1/2 text-white/70 hover:text-white animate-bounce">
+            <i class="fa-solid fa-chevron-down text-xl"></i>
+        </a>
+    </section>
+
+    <!-- ==================== FEATURED DESTINATIONS SECTION ==================== -->
+    <section id="destinations" class="py-20 sm:py-28 bg-stone-50 relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <!-- Section Heading -->
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="inline-block px-4 py-1.5 rounded-full bg-emerald-100 text-forest-800 text-xs font-bold uppercase tracking-wider mb-3">
+                    Popular Tour Highlights
+                </span>
+                <h2 class="font-serif text-3xl sm:text-5xl font-bold text-forest-950 mb-4">
+                    Must-Visit Wonders with Shammi
+                </h2>
+                <p class="text-slate-600 text-base sm:text-lg">
+                    From sacred heritage sites and coastal marine sanctuaries to thrilling wildlife safaris—select a destination below to add it straight to your booking.
+                </p>
+            </div>
+
+            <!-- 3 Destination Cards Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                
+                <!-- Destination 1: Kande Viharaya -->
+                <div class="group bg-white rounded-3xl overflow-hidden shadow-md hover:shadow-2xl border border-stone-200/80 transition-all duration-300 flex flex-col">
+                    <div class="relative h-64 overflow-hidden">
+                        <img 
+                            src="https://images.unsplash.com/photo-1588598198321-9735fd52455b?auto=format&fit=crop&w=900&q=80" 
+                            onerror="this.onerror=null;this.src='https://placehold.co/800x600/166534/ffffff?text=Kande+Viharaya';"
+                            alt="Kande Viharaya Temple Sri Lanka" 
+                            class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+                        >
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent"></div>
+                        <span class="absolute top-4 left-4 px-3 py-1 rounded-full bg-forest-900/90 backdrop-blur-sm text-amber-300 text-xs font-semibold">
+                            <i class="fa-solid fa-gopuram mr-1"></i> Cultural Heritage
+                        </span>
+                        <div class="absolute bottom-4 left-4 right-4 text-white">
+                            <p class="text-xs text-emerald-300 font-medium">Aluthgama / Bentota</p>
+                            <h3 class="font-serif text-2xl font-bold">Kande Viharaya</h3>
+                        </div>
+                    </div>
+                    <div class="p-6 flex-1 flex flex-col justify-between">
+                        <p class="text-slate-600 text-sm leading-relaxed mb-6">
+                            Experience peace and spirituality at one of Sri Lanka's most revered Buddhist temples, home to the majestic 48-meter Samadhi Buddha statue, ancient Bo tree, and intricate murals.
+                        </p>
+                        <button 
+                            type="button" 
+                            onclick="selectDestination('Kande Viharaya Temple')"
+                            class="w-full py-3 px-4 rounded-xl bg-emerald-50 hover:bg-forest-800 text-forest-800 hover:text-white font-semibold text-sm border border-emerald-200 hover:border-forest-800 transition-all flex items-center justify-center gap-2 cursor-pointer"
+                        >
+                            <i class="fa-solid fa-location-dot"></i>
+                            <span>Select This Destination</span>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Destination 2: Kosgoda Turtle Hatchery (Kesba Farm) -->
+                <div class="group bg-white rounded-3xl overflow-hidden shadow-md hover:shadow-2xl border border-stone-200/80 transition-all duration-300 flex flex-col">
+                    <div class="relative h-64 overflow-hidden">
+                        <img 
+                            src="https://images.unsplash.com/photo-1437622368342-7a3d73a34c8f?auto=format&fit=crop&w=900&q=80" 
+                            onerror="this.onerror=null;this.src='https://placehold.co/800x600/0f766e/ffffff?text=Sea+Turtle+Farm';"
+                            alt="Sea Turtle Conservation Farm Sri Lanka" 
+                            class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+                        >
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent"></div>
+                        <span class="absolute top-4 left-4 px-3 py-1 rounded-full bg-teal-900/90 backdrop-blur-sm text-emerald-300 text-xs font-semibold">
+                            <i class="fa-solid fa-water mr-1"></i> Marine Conservation
+                        </span>
+                        <div class="absolute bottom-4 left-4 right-4 text-white">
+                            <p class="text-xs text-emerald-300 font-medium">Southern Coast</p>
+                            <h3 class="font-serif text-2xl font-bold">Turtle Hatchery Farm</h3>
+                        </div>
+                    </div>
+                    <div class="p-6 flex-1 flex flex-col justify-between">
+                        <p class="text-slate-600 text-sm leading-relaxed mb-6">
+                            Visit the famous Sea Turtle Conservation Farm (Kesba Farm). Learn how endangered sea turtles are protected, see adorable baby hatchlings up close, and witness ocean conservation in action.
+                        </p>
+                        <button 
+                            type="button" 
+                            onclick="selectDestination('Sea Turtle Hatchery Farm')"
+                            class="w-full py-3 px-4 rounded-xl bg-emerald-50 hover:bg-forest-800 text-forest-800 hover:text-white font-semibold text-sm border border-emerald-200 hover:border-forest-800 transition-all flex items-center justify-center gap-2 cursor-pointer"
+                        >
+                            <i class="fa-solid fa-location-dot"></i>
+                            <span>Select This Destination</span>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Destination 3: Yala National Park -->
+                <div class="group bg-white rounded-3xl overflow-hidden shadow-md hover:shadow-2xl border border-stone-200/80 transition-all duration-300 flex flex-col">
+                    <div class="relative h-64 overflow-hidden">
+                        <img 
+                            src="https://images.unsplash.com/photo-1549366021-9f761d450615?auto=format&fit=crop&w=900&q=80" 
+                            onerror="this.onerror=null;this.src='https://placehold.co/800x600/14532d/ffffff?text=Yala+National+Park';"
+                            alt="Yala National Park Wildlife Safari" 
+                            class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+                        >
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent"></div>
+                        <span class="absolute top-4 left-4 px-3 py-1 rounded-full bg-amber-900/90 backdrop-blur-sm text-amber-300 text-xs font-semibold">
+                            <i class="fa-solid fa-paw mr-1"></i> Wildlife Safari
+                        </span>
+                        <div class="absolute bottom-4 left-4 right-4 text-white">
+                            <p class="text-xs text-emerald-300 font-medium">Deep South Wilderness</p>
+                            <h3 class="font-serif text-2xl font-bold">Yala National Park</h3>
+                        </div>
+                    </div>
+                    <div class="p-6 flex-1 flex flex-col justify-between">
+                        <p class="text-slate-600 text-sm leading-relaxed mb-6">
+                            Embark on an unforgettable 4x4 jungle safari in Yala—renowned worldwide for having one of the highest densities of wild leopards, alongside majestic elephants, sloth bears, and exotic birds.
+                        </p>
+                        <button 
+                            type="button" 
+                            onclick="selectDestination('Yala National Park Safari')"
+                            class="w-full py-3 px-4 rounded-xl bg-emerald-50 hover:bg-forest-800 text-forest-800 hover:text-white font-semibold text-sm border border-emerald-200 hover:border-forest-800 transition-all flex items-center justify-center gap-2 cursor-pointer"
+                        >
+                            <i class="fa-solid fa-location-dot"></i>
+                            <span>Select This Destination</span>
+                        </button>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Custom Islandwide Note -->
+            <div class="mt-12 p-6 sm:p-8 rounded-3xl bg-gradient-to-r from-forest-900 to-emerald-800 text-white flex flex-col md:flex-row items-center justify-between gap-6 shadow-xl">
+                <div class="flex items-center gap-4 text-center md:text-left">
+                    <div class="hidden sm:flex w-14 h-14 rounded-2xl bg-white/15 items-center justify-center text-amber-300 text-2xl shrink-0">
+                        <i class="fa-solid fa-map-location-dot"></i>
+                    </div>
+                    <div>
+                        <h4 class="font-serif text-xl sm:text-2xl font-bold">Want to visit Sigiriya, Ella, Kandy, or Galle too?</h4>
+                        <p class="text-emerald-100 text-sm mt-1">Shammi organizes customized tours anywhere across Sri Lanka tailored to your schedule.</p>
+                    </div>
+                </div>
+                <a href="#booking" class="px-6 py-3 rounded-xl bg-amber-400 hover:bg-amber-300 text-forest-950 font-bold text-sm whitespace-nowrap transition-colors shadow-md">
+                    Request Custom Route
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== ABOUT GUIDE SHAMMI SECTION ==================== -->
+    <section id="about" class="py-16 sm:py-24 bg-emerald-950 text-white relative overflow-hidden">
+        <!-- Decorative Nature Circles -->
+        <div class="absolute -top-24 -right-24 w-96 h-96 rounded-full bg-emerald-800/30 blur-3xl pointer-events-none"></div>
+        <div class="absolute -bottom-24 -left-24 w-96 h-96 rounded-full bg-teal-800/20 blur-3xl pointer-events-none"></div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                <div class="lg:col-span-5">
+                    <div class="relative rounded-3xl overflow-hidden border-4 border-emerald-700/50 shadow-2xl">
+                        <img 
+                            src="https://images.unsplash.com/photo-1586613835341-78c143aef52c?auto=format&fit=crop&w=900&q=80" 
+                            onerror="this.onerror=null;this.src='https://placehold.co/700x800/0f3d24/ffffff?text=Dinsuka+Tours';"
+                            alt="Scenic Sri Lanka Mountains and Greenery" 
+                            class="w-full h-96 object-cover"
+                        >
+                        <div class="absolute bottom-0 inset-x-0 bg-gradient-to-t from-forest-950 via-forest-950/80 to-transparent p-6">
+                            <p class="text-amber-300 text-xs font-bold uppercase tracking-widest">Your Local Tour Specialist</p>
+                            <h3 class="font-serif text-2xl font-bold text-white mt-1">Shammi — Dinsuka Tours</h3>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="lg:col-span-7 space-y-6">
+                    <span class="inline-block px-4 py-1.5 rounded-full bg-emerald-800/80 text-emerald-200 text-xs font-bold uppercase tracking-wider border border-emerald-600/40">
+                        Why Travel With Us
+                    </span>
+                    <h2 class="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold leading-tight">
+                        Experience Sri Lanka Like a Local Friend, Not Just a Tourist
+                    </h2>
+                    <p class="text-emerald-100/90 text-base sm:text-lg leading-relaxed">
+                        At <strong class="text-white">Dinsuka Tours</strong>, every journey is personal. Led by <strong class="text-amber-300">Shammi</strong>, an experienced Sri Lankan tourism guide, we take pride in offering warm hospitality, deep cultural insights, comfortable transportation, and safe guidance across every corner of our paradise island.
+                    </p>
+
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-2">
+                        <div class="p-4 rounded-2xl bg-white/5 border border-white/10 flex items-start gap-3">
+                            <i class="fa-solid fa-shield-heart text-emerald-400 text-xl mt-1"></i>
+                            <div>
+                                <h4 class="font-bold text-white text-sm">Trusted & Friendly Guidance</h4>
+                                <p class="text-xs text-emerald-200/80 mt-1">Punctual, respectful, and attentive care throughout your trip.</p>
+                            </div>
+                        </div>
+                        <div class="p-4 rounded-2xl bg-white/5 border border-white/10 flex items-start gap-3">
+                            <i class="fa-solid fa-route text-amber-300 text-xl mt-1"></i>
+                            <div>
+                                <h4 class="font-bold text-white text-sm">Flexible Itineraries</h4>
+                                <p class="text-xs text-emerald-200/80 mt-1">Day excursions or multi-day round tours planned around you.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== DEDICATED TOUR BOOKING SECTION (DIRECT WHATSAPP) ==================== -->
+    <section id="booking" class="py-20 sm:py-28 bg-gradient-to-b from-stone-100 to-emerald-50/70">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <!-- Header -->
+            <div class="text-center mb-12">
+                <span class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-emerald-100 text-forest-800 text-xs font-bold uppercase tracking-wider mb-3">
+                    <i class="fa-brands fa-whatsapp text-base text-emerald-600"></i> Instant WhatsApp Reservation
+                </span>
+                <h2 class="font-serif text-3xl sm:text-5xl font-bold text-forest-950 mb-4">
+                    Book Your Tour With Shammi
+                </h2>
+                <p class="text-slate-600 text-base sm:text-lg max-w-2xl mx-auto">
+                    Fill in your details below and click <strong class="text-forest-800">"Confirm Message"</strong>. Your booking request will be sent directly to Shammi's WhatsApp (<span class="font-semibold text-forest-900">077 940 5337</span>).
+                </p>
+            </div>
+
+            <!-- Booking Form Card -->
+            <div class="bg-white rounded-3xl shadow-xl shadow-forest-950/10 border border-emerald-100 p-6 sm:p-10 lg:p-12">
+                <form id="tourBookingForm" class="space-y-6" novalidate>
+                    
+                    <!-- Customer Name -->
+                    <div>
+                        <label for="customerName" class="block text-sm font-bold text-forest-950 mb-2">
+                            <i class="fa-solid fa-user text-emerald-600 mr-1.5"></i> Customer Full Name <span class="text-red-500">*</span>
+                        </label>
+                        <input 
+                            type="text" 
+                            id="customerName" 
+                            name="customerName" 
+                            required
+                            placeholder="Enter your full name (e.g., Kasun Perera / John Smith)"
+                            class="w-full px-4 py-3.5 rounded-2xl bg-stone-50 border border-stone-300 text-slate-900 placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-emerald-600 focus:border-emerald-600 focus:bg-white transition-all"
+                        >
+                        <p id="nameError" class="hidden text-xs text-red-600 font-medium mt-1.5">Please enter your name.</p>
+                    </div>
+
+                    <!-- Two Phone Numbers Row -->
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                        <!-- Phone Number 1 -->
+                        <div>
+                            <label for="phone1" class="block text-sm font-bold text-forest-950 mb-2">
+                                <i class="fa-solid fa-phone text-emerald-600 mr-1.5"></i> Phone Number 1 (Primary / WhatsApp) <span class="text-red-500">*</span>
+                            </label>
+                            <input 
+                                type="tel" 
+                                id="phone1" 
+                                name="phone1" 
+                                required
+                                placeholder="e.g., +94 77 123 4567"
+                                class="w-full px-4 py-3.5 rounded-2xl bg-stone-50 border border-stone-300 text-slate-900 placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-emerald-600 focus:border-emerald-600 focus:bg-white transition-all"
+                            >
+                            <p id="phone1Error" class="hidden text-xs text-red-600 font-medium mt-1.5">Please enter your primary phone number.</p>
+                        </div>
+
+                        <!-- Phone Number 2 -->
+                        <div>
+                            <label for="phone2" class="block text-sm font-bold text-forest-950 mb-2">
+                                <i class="fa-solid fa-mobile-screen-button text-emerald-600 mr-1.5"></i> Phone Number 2 (Alternative)
+                            </label>
+                            <input 
+                                type="tel" 
+                                id="phone2" 
+                                name="phone2" 
+                                placeholder="Secondary contact number (Optional)"
+                                class="w-full px-4 py-3.5 rounded-2xl bg-stone-50 border border-stone-300 text-slate-900 placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-emerald-600 focus:border-emerald-600 focus:bg-white transition-all"
+                            >
+                        </div>
+                    </div>
+
+                    <!-- Email Address -->
+                    <div>
+                        <label for="emailAddress" class="block text-sm font-bold text-forest-950 mb-2">
+                            <i class="fa-solid fa-envelope text-emerald-600 mr-1.5"></i> Email Address <span class="text-red-500">*</span>
+                        </label>
+                        <input 
+                            type="email" 
+                            id="emailAddress" 
+                            name="emailAddress" 
+                            required
+                            placeholder="yourname@example.com"
+                            class="w-full px-4 py-3.5 rounded-2xl bg-stone-50 border border-stone-300 text-slate-900 placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-emerald-600 focus:border-emerald-600 focus:bg-white transition-all"
+                        >
+                        <p id="emailError" class="hidden text-xs text-red-600 font-medium mt-1.5">Please enter a valid email address.</p>
+                    </div>
+
+                    <!-- Destination to Visit -->
+                    <div>
+                        <label for="destination" class="block text-sm font-bold text-forest-950 mb-2">
+                            <i class="fa-solid fa-map-pin text-emerald-600 mr-1.5"></i> Place / Destination You Wish to Visit <span class="text-red-500">*</span>
+                        </label>
+                        <input 
+                            type="text" 
+                            id="destination" 
+                            name="destination" 
+                            required
+                            placeholder="Type destination(s) e.g., Kande Viharaya, Turtle Farm, Yala..."
+                            class="w-full px-4 py-3.5 rounded-2xl bg-stone-50 border border-stone-300 text-slate-900 placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-emerald-600 focus:border-emerald-600 focus:bg-white transition-all"
+                        >
+                        <p id="destinationError" class="hidden text-xs text-red-600 font-medium mt-1.5">Please enter or choose the place you want to visit.</p>
+
+                        <!-- Quick-Pick Destination Chips -->
+                        <div class="mt-3">
+                            <span class="text-xs text-slate-500 font-medium block mb-2">Quick-add popular places:</span>
+                            <div class="flex flex-wrap gap-2">
+                                <button type="button" onclick="appendDestination('Kande Viharaya Temple')" class="px-3.5 py-1.5 rounded-full text-xs font-semibold bg-emerald-50 hover:bg-emerald-600 text-forest-800 hover:text-white border border-emerald-200 transition-colors cursor-pointer">
+                                    + Kande Viharaya
+                                </button>
+                                <button type="button" onclick="appendDestination('Sea Turtle Hatchery Farm')" class="px-3.5 py-1.5 rounded-full text-xs font-semibold bg-emerald-50 hover:bg-emerald-600 text-forest-800 hover:text-white border border-emerald-200 transition-colors cursor-pointer">
+                                    + Turtle Farm (Kesba)
+                                </button>
+                                <button type="button" onclick="appendDestination('Yala National Park Safari')" class="px-3.5 py-1.5 rounded-full text-xs font-semibold bg-emerald-50 hover:bg-emerald-600 text-forest-800 hover:text-white border border-emerald-200 transition-colors cursor-pointer">
+                                    + Yala National Park
+                                </button>
+                                <button type="button" onclick="appendDestination('Full Sri Lanka Custom Tour')" class="px-3.5 py-1.5 rounded-full text-xs font-semibold bg-amber-50 hover:bg-amber-500 text-amber-900 hover:text-white border border-amber-200 transition-colors cursor-pointer">
+                                    + Full Island Tour
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Submit Button: Confirm Message -->
+                    <div class="pt-4">
+                        <button 
+                            type="submit" 
+                            class="w-full py-4 px-6 rounded-2xl bg-gradient-to-r from-emerald-600 via-forest-700 to-forest-800 hover:from-emerald-500 hover:to-forest-700 text-white font-bold text-lg shadow-xl shadow-emerald-900/25 transition-all transform hover:-translate-y-0.5 active:translate-y-0 flex items-center justify-center gap-3 cursor-pointer"
+                        >
+                            <i class="fa-brands fa-whatsapp text-2xl"></i>
+                            <span>Confirm Message</span>
+                        </button>
+                        <p class="text-center text-xs text-slate-500 mt-3 flex items-center justify-center gap-1.5">
+                            <i class="fa-solid fa-lock text-emerald-600"></i>
+                            Opens WhatsApp directly to send your booking details to Shammi (0779405337)
+                        </p>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== FOOTER ==================== -->
+    <footer class="bg-forest-950 text-stone-300 border-t border-white/10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+            <div class="flex flex-col md:flex-row items-center justify-between gap-6">
+                <div class="flex items-center gap-3">
+                    <div class="w-10 h-10 rounded-xl bg-emerald-700 flex items-center justify-center text-amber-300">
+                        <i class="fa-solid fa-leaf text-lg"></i>
+                    </div>
+                    <div>
+                        <span class="font-serif text-xl font-bold text-white block">Dinsuka Tours</span>
+                        <span class="text-xs text-emerald-300">Sri Lanka Private Tour Guide — Shammi</span>
+                    </div>
+                </div>
+
+                <div class="flex flex-wrap items-center justify-center gap-6 text-sm">
+                    <a href="tel:+94779405337" class="flex items-center gap-2 text-white hover:text-amber-300 transition-colors font-medium">
+                        <i class="fa-solid fa-phone text-emerald-400"></i>
+                        <span>+94 77 940 5337 (0779405337)</span>
+                    </a>
+                    <a href="https://wa.me/94779405337" target="_blank" rel="noopener noreferrer" class="flex items-center gap-2 px-4 py-2 rounded-full bg-emerald-600/20 border border-emerald-500/40 text-emerald-300 hover:bg-emerald-600 hover:text-white transition-all font-medium">
+                        <i class="fa-brands fa-whatsapp"></i>
+                        <span>Chat on WhatsApp</span>
+                    </a>
+                </div>
+            </div>
+
+            <div class="mt-8 pt-8 border-t border-white/10 text-center text-xs text-stone-400">
+                &copy; <span id="currentYear"></span> Dinsuka Tours Sri Lanka. Guided by Shammi. All rights reserved.
+            </div>
+        </div>
+    </footer>
+
+    <!-- Floating Quick WhatsApp Button -->
+    <a 
+        href="https://wa.me/94779405337?text=Hello%20Shammi!%20I%20visited%20the%20Dinsuka%20Tours%20website%20and%20would%20like%20to%20inquire%20about%20a%20tour%20in%20Sri%20Lanka." 
+        target="_blank" 
+        rel="noopener noreferrer"
+        aria-label="Chat with Shammi on WhatsApp"
+        class="fixed bottom-6 right-6 z-40 w-14 h-14 rounded-full bg-emerald-500 hover:bg-emerald-400 text-white shadow-2xl shadow-emerald-950/60 flex items-center justify-center text-3xl transition-transform hover:scale-110"
+    >
+        <i class="fa-brands fa-whatsapp"></i>
+    </a>
+
+    <!-- Confirmation Modal (Custom UI Message Box - No alert() used) -->
+    <div id="confirmationModal" class="fixed inset-0 z-50 hidden items-center justify-center bg-black/70 backdrop-blur-sm p-4">
+        <div class="bg-white rounded-3xl max-w-md w-full p-6 sm:p-8 shadow-2xl border border-emerald-100 transform transition-all">
+            <div class="w-16 h-16 rounded-2xl bg-emerald-100 text-emerald-600 flex items-center justify-center text-3xl mx-auto mb-4">
+                <i class="fa-brands fa-whatsapp"></i>
+            </div>
+            <h3 class="font-serif text-2xl font-bold text-center text-forest-950 mb-2">
+                Forwarding to Shammi's WhatsApp!
+            </h3>
+            <p class="text-sm text-slate-600 text-center mb-4">
+                Your tour request has been formatted for <strong class="text-forest-900">077 940 5337</strong>. If WhatsApp didn't open automatically, click the button below:
+            </p>
+            <div id="messagePreviewBox" class="bg-stone-50 border border-stone-200 rounded-2xl p-4 text-xs text-slate-700 font-mono whitespace-pre-line mb-6 max-h-48 overflow-y-auto"></div>
+            <div class="flex flex-col sm:flex-row gap-3">
+                <a id="directWhatsAppLink" href="#" target="_blank" rel="noopener noreferrer" class="flex-1 py-3 px-4 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white font-bold text-sm text-center shadow-md transition-colors">
+                    Open WhatsApp Now
+                </a>
+                <button type="button" onclick="closeModal()" class="py-3 px-4 rounded-xl bg-stone-200 hover:bg-stone-300 text-slate-800 font-semibold text-sm transition-colors cursor-pointer">
+                    Close
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- ==================== JAVASCRIPT LOGIC ==================== -->
+    <script>
+        // Set current year in footer
+        document.getElementById('currentYear').textContent = new Date().getFullYear();
+
+        // Mobile navigation toggle
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const mobileLinks = document.querySelectorAll('.mobile-link');
+
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+
+        // Select Destination from Cards & Scroll smoothly to Booking Form
+        function selectDestination(placeName) {
+            const destInput = document.getElementById('destination');
+            destInput.value = placeName;
+            document.getElementById('destinationError').classList.add('hidden');
+            
+            const bookingSection = document.getElementById('booking');
+            bookingSection.scrollIntoView({ behavior: 'smooth' });
+            
+            // Highlight input briefly for visual feedback
+            destInput.classList.add('ring-2', 'ring-emerald-500', 'bg-emerald-50/40');
+            setTimeout(() => {
+                destInput.classList.remove('ring-2', 'ring-emerald-500', 'bg-emerald-50/40');
+            }, 1500);
+        }
+
+        // Append Destination from Quick Chips
+        function appendDestination(placeName) {
+            const destInput = document.getElementById('destination');
+            const currentVal = destInput.value.trim();
+            
+            if (!currentVal) {
+                destInput.value = placeName;
+            } else if (!currentVal.toLowerCase().includes(placeName.toLowerCase())) {
+                destInput.value = currentVal + ', ' + placeName;
+            }
+            document.getElementById('destinationError').classList.add('hidden');
+        }
+
+        // Modal controls
+        const modal = document.getElementById('confirmationModal');
+        function closeModal() {
+            modal.classList.add('hidden');
+            modal.classList.remove('flex');
+        }
+
+        // Booking Form Submission -> Format & Send Directly to Shammi's WhatsApp (0779405337)
+        const bookingForm = document.getElementById('tourBookingForm');
+
+        bookingForm.addEventListener('submit', function(event) {
+            event.preventDefault();
+
+            // Gather input values
+            const nameInput = document.getElementById('customerName');
+            const phone1Input = document.getElementById('phone1');
+            const phone2Input = document.getElementById('phone2');
+            const emailInput = document.getElementById('emailAddress');
+            const destinationInput = document.getElementById('destination');
+
+            const name = nameInput.value.trim();
+            const phone1 = phone1Input.value.trim();
+            const phone2 = phone2Input.value.trim();
+            const email = emailInput.value.trim();
+            const destination = destinationInput.value.trim();
+
+            // Validation flags
+            let isValid = true;
+
+            if (!name) {
+                document.getElementById('nameError').classList.remove('hidden');
+                isValid = false;
+            } else {
+                document.getElementById('nameError').classList.add('hidden');
+            }
+
+            if (!phone1) {
+                document.getElementById('phone1Error').classList.remove('hidden');
+                isValid = false;
+            } else {
+                document.getElementById('phone1Error').classList.add('hidden');
+            }
+
+            const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!email || !emailPattern.test(email)) {
+                document.getElementById('emailError').classList.remove('hidden');
+                isValid = false;
+            } else {
+                document.getElementById('emailError').classList.add('hidden');
+            }
+
+            if (!destination) {
+                document.getElementById('destinationError').classList.remove('hidden');
+                isValid = false;
+            } else {
+                document.getElementById('destinationError').classList.add('hidden');
+            }
+
+            if (!isValid) return;
+
+            // Construct clean, structured WhatsApp message for Shammi
+            const whatsappMessage = 
+`🌿 *NEW TOUR BOOKING - DINSUKA TOURS* 🌿
+Hello Shammi, I would like to book a tour in Sri Lanka!
+
+👤 *Customer Name:* ${name}
+📞 *Phone Number 1:* ${phone1}
+📱 *Phone Number 2:* ${phone2 ? phone2 : 'Not provided'}
+✉️ *Email Address:* ${email}
+📍 *Destination to Visit:* ${destination}
+
+Please let me know the availability and tour details. Thank you!`;
+
+            // Shammi's WhatsApp Number: 0779405337 -> International Sri Lanka format: 94779405337
+            const shammiWhatsAppNumber = '94779405337';
+            const encodedMessage = encodeURIComponent(whatsappMessage);
+            const whatsappUrl = `https://wa.me/${shammiWhatsAppNumber}?text=${encodedMessage}`;
+
+            // Show confirmation preview modal & trigger WhatsApp redirect
+            document.getElementById('messagePreviewBox').textContent = whatsappMessage;
+            document.getElementById('directWhatsAppLink').href = whatsappUrl;
+            modal.classList.remove('hidden');
+            modal.classList.add('flex');
+
+            // Open WhatsApp in new tab/app
+            window.open(whatsappUrl, '_blank', 'noopener,noreferrer');
+        });
+    </script>
+</body>
+</html>
